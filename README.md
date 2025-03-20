@@ -1,37 +1,13 @@
 # Facial-Emotion-Recognition-using-OpenCV-and-Deepface
 This project implements real-time facial emotion detection using the `deepface` library and OpenCV. It captures video from the webcam, detects faces, and predicts the emotions associated with each face. The emotion labels are displayed on the frames in real-time.
 
-## Approach
-
-1. Import the necessary libraries: `cv2` for video capture and image processing, and `deepface` for the emotion detection model.
-
-2. Load the Haar cascade classifier XML file for face detection using `cv2.CascadeClassifier()`.
-
-3. Start capturing video from the default webcam using `cv2.VideoCapture()`.
-
-4. Enter a continuous loop to process each frame of the captured video.
-
-5. Convert each frame to grayscale using `cv2.cvtColor()`.
-
-6. Detect faces in the grayscale frame using `face_cascade.detectMultiScale()`.
-
-7. For each detected face, extract the face ROI (Region of Interest).
-
-8. Preprocess the face image for emotion detection using the `deepface` library's built-in preprocessing function.
-
-9. Make predictions for the emotions using the pre-trained emotion detection model provided by the `deepface` library.
-
-10. Retrieve the index of the predicted emotion and map it to the corresponding emotion label.
-
-11. Draw a rectangle around the detected face and label it with the predicted emotion using `cv2.rectangle()` and `cv2.putText()`.
-
-12. Display the resulting frame with the labeled emotion using `cv2.imshow()`.
-
-13. If the 'q' key is pressed, exit the loop.
-
+## How to run code : 
+1. **Import Libraries**: Import `cv2` for video processing and `deepface` for emotion detection.  
+2. **Load Face Detector**: Initialize the Haar cascade classifier using `cv2.CascadeClassifier()`.  
+3. **Start Video Capture**: Use `cv2.VideoCapture()` to capture video from the default webcam.  
+4. **Process Frames Continuously**: Convert each frame to grayscale and detect faces using `face_cascade.detectMultiScale()`.  
+5. **Detect and Analyze Emotion**: Extract the face ROI, preprocess it, and use `deepface` to predict the emotion.  
+6. **Display Results**: Draw a rectangle around detected faces, label them with predicted emotions, and show the frame using `cv2.imshow()`.  
+7. **Exit on Key Press**: Stop processing if the 'q' key is pressed.
 14. Release the video capture and close all windows using `cap.release()` and `cv2.destroyAllWindows()`.
-
-![image](https://github.com/manish-9245/Facial-Emotion-Recognition-using-OpenCV-and-Deepface/assets/69393822/57c41270-7575-4bc7-ae7a-99d67239a5ab)
-
-
 
